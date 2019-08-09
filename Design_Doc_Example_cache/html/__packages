@@ -1,8 +1,0 @@
-base
-ggplot2
-usethis
-devtools
-knitr
-data.table
-DBI
-latex2exp
