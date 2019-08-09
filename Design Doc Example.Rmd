@@ -4,7 +4,6 @@ author: "Samantha Sifleet"
 date: "`r Sys.Date()`"
 output:
   html_document:
-    keep_md: true
     toc: true
     number_sections: true
     toc_float:
