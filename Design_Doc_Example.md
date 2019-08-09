@@ -1,7 +1,7 @@
 ---
 title: "Data Science Design Document"
 author: "Samantha Sifleet"
-date: "`r Sys.Date()`"
+date: "2019-08-09"
 output:
   html_document:
     keep_md: true
@@ -12,21 +12,7 @@ output:
       smooth_scroll: false
 ---
 
-```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
 
-knitr::opts_chunk$set(echo = FALSE)
-knitr::opts_chunk$set(message = FALSE)
-knitr::opts_chunk$set(fig.width = 7)
-knitr::opts_chunk$set(fig.height = 4)
-knitr::opts_chunk$set(comment = '')
-knitr::opts_chunk$set(cache = TRUE)
-library(ggplot2)
-library(latex2exp)
-library(devtools)
-library(knitr)
-library(data.table)
-library(DBI)
-```
 
 # Project Title
 
@@ -88,8 +74,19 @@ The reader should see exactly where the data came from and any transformations o
 
 In this case I just call the iris data set directly in R.
 
-```{r iris, echo = TRUE}
+
+```r
 head(iris)
+```
+
+```
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
 ```
 
 ### QA + Charts
@@ -106,15 +103,7 @@ Questions this section should answer:
 
 This list is not exhaustive but a good starting point.
 
-```{r irischart, echo = FALSE, fig.width=12, fig.height=10, fig.align='center'}
-
-ggplot(iris, aes(Sepal.Length, Petal.Length, color = Species)) +
-  geom_point(size =2)+
-  theme_bw() +
-  theme(legend.position="bottom") +
-  ggtitle("Iris Petal Length by Sepal Length and Species")
-
-``` 
+<img src="Design_Doc_Example_files/figure-html/irischart-1.png" style="display: block; margin: auto;" />
 
 
 # Methods
